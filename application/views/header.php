@@ -74,7 +74,7 @@
                                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                         Keahlian
                                     </a>
-                                    <!-- <a class="nav-link" href="lowongan keahlian.html">Lowongan Keahlian</a> -->
+                                    <a class="nav-link" href="<?=base_url()?>lowongan_keahlian">Lowongan Keahlian</a>
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Mitra</div>

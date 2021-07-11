@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Keahlian extends CI_Controller {
     public function index ()
     {
-        $this->load->model('All_model', 'keahlian');
+        $this->load->model('keahlian_model', 'keahlian');
         $data['list_keahlian']=$this->keahlian->getALL('keahlian');
 
         $this->load->view('header');
@@ -23,7 +23,7 @@ class Keahlian extends CI_Controller {
         $_nama = $this->input->post('nama');
         $_idedit = $this->input->post('idedit');
 
-        $this->load->model('All_model', 'keahlian');
+        $this->load->model('keahlian_model', 'keahlian');
         $data_keahlian = [$_nama];
 
         if($this->session->has_userdata('username') == 'admin'){
@@ -42,7 +42,7 @@ class Keahlian extends CI_Controller {
     }
 
     public function edit($id){
-        $this->load->model('all_model','keahlian');
+        $this->load->model('keahlian_model','keahlian');
 		$obj_keahlian = $this->keahlian->findById('keahlian',$id);
 
         $data['objkeahlian'] = $obj_keahlian;
@@ -52,7 +52,7 @@ class Keahlian extends CI_Controller {
     }
 
     public function delete($id){
-        $this->load->model('all_model','keahlian');
+        $this->load->model('keahlian_model','keahlian');
 		$data_keahlian['id'] = $id;
 		// pastikan role diizinkan
         if($this->session->has_userdata('username') == 'admin'){

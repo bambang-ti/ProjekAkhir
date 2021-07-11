@@ -79,10 +79,10 @@
                                             echo "<b>, Selamat Pagi !!</b>";
                                         } else if (($a > 11) && ($a <= 15)) {
                                             echo ", Selamat Pagi !!";
-                                        } else if (($a > 15) && ($a <= 18)) {
+                                        } else if (($a > 15) && ($a <= 17)) {
                                             echo ", Selamat Siang !!";
                                         } else {
-                                            echo ", <b> Selamat Malam </b>";
+                                            echo ", <b> Selamat Malam !! </b>";
                                         }
                                         ?>
 
